@@ -1,28 +1,29 @@
 # THOR-Mozfest
 Building citation lists using ORCID records and DOI metadata at Mozfest 2015
 
-*Aim of the session*: We're going to try to get to grips with the Public ORCID API & DOI metadata.  
+## Aim of the session
+We're going to try to get to grips with the Public ORCID API & DOI metadata.  
 
-*Setup*
+### Setup
 - Clone this repo
 - Create an ORCID account if we don't have one already
 - Get some API credentials
 
-*Step 1*
+### Step 1
 - Get a list of works for an ORCID ID
 
-*Step 2*
+### Step 2
 - Get the metadata from the DOIs
 - Decide how to deal with non-DOI works, we can get limited metadata from ORCID
 
-*Step 3*
+### Step 3
 - Turn the metadata into a reference list
 
-*Step 4*
+### Step 4
 - Configure our API client details
 - Authenticate users so we can display their works 
 
-*Step 5*
+### Step 5
 - Go crazy - work on your use cases
 - Make it work for multiple authors - build co-author graphs
 - Make it work in the other direction - extract ORCIDs from DOIs
@@ -34,7 +35,7 @@ Building citation lists using ORCID records and DOI metadata at Mozfest 2015
 - Enable users to update their profiles, push things into ORCID, use the member API, get sandbox credentials
 - ETC!
 
-# The ORCID Public API
+## The ORCID Public API
 
 The ORCID Public API enables you to do the following things:
 
@@ -46,7 +47,7 @@ Using the Public API requires a set of credentials consisting of a Client ID and
 
 There is a great [introduction to using the Public API](http://members.orcid.org/api/introduction-orcid-public-api) in the ORCID API documentation
 
-# Authenticating ORCID users
+## Authenticating ORCID users
 
 ORCID uses the OAuth2 protocol for authentication.  This is a user centric authentication mechanism that allows users fine grained control over what third parties can and cannot do with their ORCID record.   It works like this:
 
@@ -61,7 +62,7 @@ Implementing this in code is easier than it sounds.
 
 More details can be found in the [ORCID OAuth documentation](https://members.orcid.org/api/oauth2).
 
-# The ORCID Member API
+## The ORCID Member API
 
 The ORCID Member API enables you to do everything the public API can do and in addition:
 
