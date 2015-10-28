@@ -127,10 +127,7 @@ $.ajax({
 ```
 [JSFiddle](http://jsfiddle.net/TomDemeranville/gL4rzL5f/5/)
 
-
-
-
-The (full content negotiation documentation](http://crosscite.org/cn/)
+The [full content negotiation documentation](http://crosscite.org/cn/)
 
 ## Other javascript ORCID libraries/implementations
 
