@@ -18,6 +18,7 @@ We're going to try to get to grips with the Public ORCID API & DOI metadata.
 
 ### Step 3
 - Turn the metadata into a reference list
+- Take a look at citeproc-js (it's rather large!)
 
 ### Step 4
 - Configure our API client details
@@ -104,4 +105,38 @@ Crosscite-JSON is a convenient format as it's  usable out of the box by most lan
 }
 ```
 
+### Example fetch of DOI metadata
+```Javascript
+$.ajax({
+    headers: { 
+        Accept : "application/vnd.citationstyles.csl+json"
+    },
+    type: "GET",
+    url: "http://dx.doi.org/10.1038/nrd842",
+    success: function (data) {
+        if (data){
+            $("#result").text(JSON.stringify(data,null,'  '));
+        }else{
+            $("#result").text("no result...");            
+        }
+    },
+    error: function (jqXHR, textStatus, errorThrown )	 {
+     	$("#result").text("error: "+textStatus);
+    }
+});
+```
+[JSFiddle](http://jsfiddle.net/TomDemeranville/gL4rzL5f/5/)
+
+
+
+
 The (full content negotiation documentation](http://crosscite.org/cn/)
+
+## Other javascript ORCID libraries/implementations
+
+For inspiration!
+
+- (ORCID Researcher Lookup Widget)[http://developers.ands.org.au/widgets/orcid_widget/]
+- (ORCID-JS - with citeproc citation support)[https://github.com/ORCID/orcid-js]
+- (ORCID Public V2 API swagger)[https://pub.orcid.org/v2.0_rc1]
+- (ORCID Member V2 API swagger)[https://api.orcid.org/v2.0_rc1]
