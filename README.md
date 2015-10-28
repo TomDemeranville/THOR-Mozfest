@@ -1,6 +1,39 @@
 # THOR-Mozfest
 Building citation lists using ORCID records and DOI metadata at Mozfest 2015
 
+# Aim of the session
+
+We're going to try to get to grips with the Public ORCID API and match identifiers in ORCID records to the metadata held by Datacite and/or Crossref using the DOIs.
+
+Step 0
+- Get some API credentials
+
+Step 1
+- Get a list of works for an ORCID ID
+
+Step 2
+- Get the metadata from the DOIs
+- Decide how to deal with non-DOI works, we can get limited metadata from ORCID
+
+Step 3
+- Turn the metadata into a reference list
+
+Step 4
+- Authenticate users so we can display their works 
+
+Step 5
+- Go crazy - work on your use cases
+- Make it work for multiple authors - build co-author graphs
+- Make it work in the other direction - extract ORCIDs from DOIs
+- Add an author search
+- Turn the ORCID profile into a widget
+- Produce BibTeX
+- Work out how to map to RIS or Endnote XML
+- Pipe the output into another service or tool
+- Enable users to update their profiles, push things into ORCID, use the member API, get sandbox credentials
+- ETC!
+
+
 # The ORCID Public API
 
 The ORCID Public API enables you to do the following things:
