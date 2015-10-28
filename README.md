@@ -5,7 +5,9 @@ Building citation lists using ORCID records and DOI metadata at Mozfest 2015
 
 We're going to try to get to grips with the Public ORCID API & DOI metadata.  
 
-## Step 0
+## Setup
+- Clone this repo
+- Create an ORCID account if we don't have one already
 - Get some API credentials
 
 ## Step 1
@@ -19,6 +21,7 @@ We're going to try to get to grips with the Public ORCID API & DOI metadata.
 - Turn the metadata into a reference list
 
 ## Step 4
+- Configure our API client details
 - Authenticate users so we can display their works 
 
 ## Step 5
