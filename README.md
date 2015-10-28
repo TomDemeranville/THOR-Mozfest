@@ -6,8 +6,8 @@ We're going to try to get to grips with the Public ORCID API & DOI metadata.
 
 ### Setup
 - Clone this repo
-- Create an ORCID account if we don't have one already
-- Get some API credentials
+- [Create an ORCID account](https://orcid.org/signin) if we don't have one already
+- Get some [API credentials](https://orcid.org/developer-tools)
 
 ### Step 1
 - Get a list of works for an ORCID ID
@@ -34,6 +34,8 @@ We're going to try to get to grips with the Public ORCID API & DOI metadata.
 - Pipe the output into another service or tool
 - Enable users to update their profiles, push things into ORCID, use the member API, get sandbox credentials
 - ETC!
+
+# Quick intro to the APIs
 
 ## The ORCID Public API
 
@@ -77,3 +79,29 @@ The ORCID Member API enables you to do everything the public API can do and in a
 - Receive notifications when member records change
 
 There is a great [introduction to using the Member API](http://members.orcid.org/api/introduction-orcid-member-api) in the ORCID API documentation
+
+## DOI metadata API
+
+Crossref and Datacite both support *content negotiation* enabling clients to request DOI metadata in the format most suitable to them.  These formats include Bibtex, Citeproc-JSON, RDF as well as XML and JSON formats specific to Crossref and Datacite.
+
+Crosscite-JSON is a convenient format as it's  usable out of the box by most languages and available from both Crossref and Datacite.  Here is an example, expressed as Crosscite-JSON:
+
+```javascript
+{
+  "volume" : "169",
+  "issue" : "3946",
+  "DOI" : "10.1126/science.169.3946.635",
+  "URL" : "http://dx.doi.org/10.1126/science.169.3946.635",
+  "title" : "The Structure of Ordinary Water: New data and interpretations are 
+           yielding new insights into this fascinating substance",
+  "container-title" : "Science",
+  "publisher" : "American Association for the Advancement of Science AAAS (Science)",
+  "issued" : { "date-parts" : [ [ 1970,8,14 ] ] },
+  "author" : [ { "family" : "Frank", "given" : "H. S."} ],
+  "editor" : [],
+  "page" : "635-641",
+  "type" : "article-journal"
+}
+```
+
+The (full content negotiation documentation](http://crosscite.org/cn/)
