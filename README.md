@@ -135,6 +135,13 @@ $.ajax({
 
 The [full content negotiation documentation](http://crosscite.org/cn/)
 
+# Top tips
+
+Start a webserver on your local machine using this simple python.  Great for testing
+```
+python -m SimpleHTTPServer 8000
+```
+
 ## Other javascript ORCID libraries/implementations
 
 For inspiration!

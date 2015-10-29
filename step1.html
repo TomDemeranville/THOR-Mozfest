@@ -3,10 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <title>Step 1: Get a list of works for an ORCID ID</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$.ajax({
+    headers: {
+        Accept: "application/json"
+    },
+    type: "GET",
+    url: "http://pub.orcid.org/v2.0_rc1/0000-0003-0902-4386/activities",
+    success: function (data) {
+        if (data) {
+            $("#result").text(JSON.stringify(data, null, '  '));
+        } else {
+            $("#result").text("no result...");
+        }
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+        $("#result").text("error: " + textStatus);
+    }
+});
+</script>
 </head>
 <body>
 	<h1>Step 1: Get a list of works for an ORCID ID</h1>
-
+	<pre id="result">...</pre>
 	<a href="step2.html">next step</a>
 </body>
 </html>
