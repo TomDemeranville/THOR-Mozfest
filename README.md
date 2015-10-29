@@ -14,17 +14,15 @@ We're going to try to get to grips with the Public ORCID API & DOI metadata.
 
 ### Step 2
 - Get the metadata from the DOIs
-- Decide how to deal with non-DOI works, we can get limited metadata from ORCID
-
-### Step 3
 - Turn the metadata into a reference list
+- Decide how to deal with non-DOI works, we can get limited metadata from ORCID
 - Take a look at citeproc-js (it's rather large!)
 
-### Step 4
+### Step 3
 - Configure our API client details
 - Authenticate users so we can display their works 
 
-### Step 5
+### Step 4
 - Go crazy - work on your use cases
 - Make it work for multiple authors - build co-author graphs
 - Make it work in the other direction - extract ORCIDs from DOIs
