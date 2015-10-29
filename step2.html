@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Step 1: Get a list of works for an ORCID ID</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+
+var getORCIDMetadata = function(orcid){
+	$.ajax({
+	    headers: {
+	        Accept: "application/json"
+	    },
+	    type: "GET",
+	    url: "http://pub.orcid.org/v2.0_rc1/"+orcid+"/activities",
+	    success: function (data) {
+	        if (data) {
+	            getDOIMetadata(data);
+	        } else {
+	            $("#result").text("no result...");
+	        }
+	    },
+	    error: function (jqXHR, textStatus, errorThrown) {
+	        $("#result").text("error: " + textStatus);
+	    }
+	});
+}
+
+var getDOIMetadata = function(data){
+	/*
+	var worksList = data.works.group.map(function(obj){ 
+	   var work = {};
+	   work.title = obj["work-summary"][0].title.title.value;
+	   work.ID = obj.identifiers.identifier[0]["external-identifier-id"];
+	   work.identifierType = obj.identifiers.identifier[0]["external-identifier-type"];
+	   return work;	   
+	});*/
+	data.works.group.forEach(function(obj){			
+		if ( obj.identifiers.identifier[0]["external-identifier-type"] == "doi" ){
+			$.ajax({
+			    headers: { 
+			    	//change this to application/x-bibtex or application/json or application/RIS
+			        Accept : "text/x-bibliography; style=apa"
+			    },
+			    type: "GET",
+			    url: "http://dx.doi.org/"+obj.identifiers.identifier[0]["external-identifier-id"],
+			    success: function (data) {
+			        if (data){
+			            $("#result").append(data+"<br/>");
+			        }else{
+			            $("#result").append("no result for "+obj.ID+"<br/>");            
+			        }
+			    },
+			    error: function (jqXHR, textStatus, errorThrown )	 {
+			     	$("#result").append("error: "+textStatus+"<br/>");
+			    }
+			});	
+		} else {
+			//let's skip this for the moment
+		}
+	});
+}
+
+getORCIDMetadata("0000-0003-0902-4386");
+</script>
+</head>
+<body>
+	<h1>Step 2: Get a list of works for an ORCID ID and their DOI metadata</h1>
+	<pre id="result"></pre>
+	<a href="step3.html">next step</a>
+</body>
+</html>
