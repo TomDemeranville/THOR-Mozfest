@@ -50,6 +50,12 @@ Using the Public API requires a set of credentials consisting of a Client ID and
 
 There is a great [introduction to using the Public API](http://members.orcid.org/api/introduction-orcid-public-api) in the ORCID API documentation
 
+There are two versions of the API.  v1.2 is in wide use and v2.0 is in beta.
+
+[JSFiddle showing 1.2 fetch works](https://jsfiddle.net/TomDemeranville/vj2Lskje/1/)
+
+[JSFiddle showing 2.0 fetch activites](https://jsfiddle.net/TomDemeranville/wdudooLg/3/)
+
 ## Authenticating ORCID users
 
 ORCID uses the OAuth2 protocol for authentication.  This is a user centric authentication mechanism that allows users fine grained control over what third parties can and cannot do with their ORCID record.   It works like this:
