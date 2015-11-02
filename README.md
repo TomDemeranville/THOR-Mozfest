@@ -62,6 +62,13 @@ There are two versions of the API.  v1.2 is in wide use and v2.0 is in beta.
 The ORCID registry can be searched using the v1.2 API.  It supports the SOLR syntax and fields from the bio portion of the ORCID record can be queried.  All query syntaxes available in SOLR 3.6 are supported, including Lucene (with Solr extensions) which is the default, DisMax and Extended Dismax.
 
 [JSFiddle showing v1.2 search](https://jsfiddle.net/TomDemeranville/doew6d1u/1/)
+
+We can query the ORCID search API by specific field (see the documentation above). For example, we can search for records with a given DOI. Note how we enclose the DOI with escaped quotes in the query - this is so that we get an exact match:
+
+```
+https://pub.orcid.org/v1.2/search/orcid-bio/?q=digital-object-ids:\"10.6084/m9.figshare.1373669\
+```
+
 [Official ORCID search api documentation](http://members.orcid.org/api/tutorial-searching-api-12-and-earlier)
 
 ## Authenticating ORCID users
