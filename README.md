@@ -22,6 +22,9 @@ We're going to try to get to grips with the Public ORCID API & DOI metadata.
 - Configure our API client details
 - Authenticate users so we can display their works 
 
+### Step X
+- Look at the search API, just because it's useful.
+
 ### Step 4
 - Go crazy - work on your use cases
 - Make it work for multiple authors - build co-author graphs
@@ -53,6 +56,10 @@ There are two versions of the API.  v1.2 is in wide use and v2.0 is in beta.
 [JSFiddle showing 1.2 fetch works](https://jsfiddle.net/TomDemeranville/vj2Lskje/1/)
 
 [JSFiddle showing 2.0 fetch activites](https://jsfiddle.net/TomDemeranville/wdudooLg/3/)
+
+### Search
+
+{tbc}
 
 ## Authenticating ORCID users
 
