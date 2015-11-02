@@ -59,7 +59,10 @@ There are two versions of the API.  v1.2 is in wide use and v2.0 is in beta.
 
 ### Search
 
-{tbc}
+The ORCID registry can be searched using the v1.2 API.  It supports the SOLR syntax and fields from the bio portion of the ORCID record can be queried.  All query syntaxes available in SOLR 3.6 are supported, including Lucene (with Solr extensions) which is the default, DisMax and Extended Dismax.
+
+[JSFiddle showing v1.2 search](https://jsfiddle.net/TomDemeranville/doew6d1u/1/)
+[Official ORCID search api documentation](http://members.orcid.org/api/tutorial-searching-api-12-and-earlier)
 
 ## Authenticating ORCID users
 
