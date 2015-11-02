@@ -34,7 +34,8 @@ We're going to try to get to grips with the Public ORCID API & DOI metadata.
 - Produce BibTeX
 - Work out how to map to RIS or Endnote XML
 - Pipe the output into another service or tool
-- Enable users to update their profiles, push things into ORCID, use the member API, get sandbox credentials
+- Use (ORCID-JS)[https://github.com/ORCID/orcid-js] to leverage the citeproc-js support
+- Use (simple member node js)[https://github.com/ORCID/simple-member-api-nodejs] to work with the member API, Enable users to update their profiles, push things into ORCID, use the member API, get sandbox credentials
 - ETC!
 
 # Quick intro to the APIs
@@ -165,3 +166,5 @@ For inspiration!
 - (ORCID-JS - with citeproc citation support)[https://github.com/ORCID/orcid-js]
 - (ORCID Public V2 API swagger)[https://pub.orcid.org/v2.0_rc1]
 - (ORCID Member V2 API swagger)[https://api.orcid.org/v2.0_rc1]
+- (simple member node js)[https://github.com/ORCID/simple-member-api-nodejs]
+- (ORCID API walkthrough using node)[https://github.com/ORCID/orcid-api-walkthrough]
