@@ -96,6 +96,8 @@ Implementing this in code is easier than it sounds.
 
 More details can be found in the [ORCID OAuth documentation](https://members.orcid.org/api/oauth2).
 
+[This JSFiddle shows requesting a login](https://fiddle.jshell.net/TomDemeranville/ttmrd4dm/10/)
+
 ## The ORCID Member API
 
 The ORCID Member API enables you to do everything the public API can do and in addition:
