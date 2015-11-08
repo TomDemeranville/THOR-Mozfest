@@ -28,7 +28,7 @@ Need some test data in there?  Well, software is a citable output.  The kind fol
 ### Step 3
 - Configure our API client details.  Go to your ORCID profile, and select "developer tools"
 - Authenticate users so we can display their works 
-- Have a look at [this JSFiddle](https://fiddle.jshell.net/TomDemeranville/ttmrd4dm/9/)
+- Have a look at [this JSFiddle](https://fiddle.jshell.net/TomDemeranville/ttmrd4dm/10/)
 
 
 ### Step X
