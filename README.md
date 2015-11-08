@@ -26,8 +26,10 @@ Need some test data in there?  Well, software is a citable output.  The kind fol
 - Take a look at citeproc-js (it's rather large!)
 
 ### Step 3
-- Configure our API client details
+- Configure our API client details.  Go to your ORCID profile, and select "developer tools"
 - Authenticate users so we can display their works 
+- Have a look at [this JSFiddle](https://fiddle.jshell.net/TomDemeranville/ttmrd4dm/9/)
+
 
 ### Step X
 - Look at the search API, just because it's useful.
