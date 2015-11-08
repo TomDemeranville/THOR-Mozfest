@@ -2,7 +2,14 @@
 Building citation lists using ORCID records and DOI metadata at Mozfest 2015
 
 ## Aim of the session
-We're going to try to get to grips with the Public ORCID API & DOI metadata.  
+We're going to try to get to grips with the Public ORCID API & DOI metadata.
+
+### Er, What?
+[ORCID](http://orcid.org) is an open, non-profit, community-based effort to provide a registry of unique researcher identifiers.  It's used within scholarly commuication to ensure that one Joe Bloggs doesn't get confused with another Joe Bloggs when publishing research outputs.
+
+If you're an academic researcher chances are that you already have an ID.  If you're not, or you don't, head over to the registry and [create an account](https://orcid.org/register).  It takes 2 minutes.
+
+Need some test data in there?  Well, software is a citable output.  The kind folks at Mozilla Science have worked with github and figshare to capture repositoiry snapshots and assign them DOIs.  [Claim one of your repos now](https://mozillascience.github.io/code-research-object/)!  
 
 ### Setup
 - Clone this repo
