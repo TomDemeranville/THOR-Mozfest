@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Step 1: Get a list of works for an ORCID ID</title>
+<title>Step 3</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
 
@@ -10,7 +10,7 @@
 var oAuthEndPoint = "http://orcid.org/oauth/authorize";
 var oAuthClientID = "APP-NRCK40AG2BK1Z08P";
 var oAuthScope = "/authenticate";
-var redirect_uri = window.parent.location.search;
+var redirectUri = "http://localhost:8000/step3.html";
 
 //extract a query param fromthe URL.
 function getUrlVar(key) {
@@ -33,12 +33,10 @@ function GetOAuthURL() {
     var a = document.createElement('a');
     a.href = document.referrer;
 
-    // Replace the jsfiddle.net with the fiddle.jshell.net domain
-    var redirect_uri = ['http://fiddle.jshell.net', a.pathname].join('');
     a = '';
 
     // URL Encode parameters
-    var redirect_uri = encodeURIComponent(redirect_uri); // Get current URL
+    var redirect_uri = encodeURIComponent(redirectUri); // Get current URL
     var client_id = encodeURIComponent(oAuthClientID);
     var scope = encodeURIComponent(oAuthScope);
 
@@ -102,14 +100,27 @@ var getDOIMetadata = function(data){
 	});
 }
 
+$( document ).ready(function() {
+	if (getUrlVar("code") != "") {
+        // Make request if token is avalible
+        //GetToken(GetURLParameter("access_token"));
+        //display access code
+        $("#code").text("You recived an ORCID access code  " + getUrlVar("code") + " now you need to use curl or a server, because this won't work browser side");
+        $("#result").show();
+
+	}else{
+		$("#btnOAuth").attr("href", GetOAuthURL());		
+	}
+});
+
 //oauth using jsfiddle: https://fiddle.jshell.net/93cdmshm 
 
 //getORCIDMetadata("0000-0003-0902-4386");
 </script>
 </head>
 <body>
-	<h1>Step 3: Use OAuth to get a list of works for an ORCID ID and their DOI metadata</h1> tbc!
-	<button id="btnOAuth">Sign into ORCID</button>
+	<h1>Step 3: Use OAuth to get a list of works for an ORCID ID and their DOI metadata</h1> 
+	<a id="btnOAuth">Sign into ORCID</a>
 	<pre id="code"></pre>
 	<pre id="result" style="display:none">curl -i -L -k -H 'Accept: application/json' --data 'client_id=REPLACE WITH YOURS&client_secret=REPLACE WITH YOURS&grant_type=authorization_code&redirect_uri=REPLACE WITH YOUR ADDRESS&code=REPLACE WITH OAUTH CODE' https://pub.orcid.org/oauth/token</pre>
 	<a href="step4.html">next step</a>
